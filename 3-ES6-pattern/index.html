@@ -11,19 +11,13 @@
         var lastName = 'global lName';
         var jQuery = '!imported';            
      </script>
-    <script src="./index.js"></script>   
-    <script>
-        // the problem : module1 is global variable and it can be overridden
-        // module1 = 0;
-
-        // call fullName function
-        module1.fullName('Wasil', 'Sayyed');
-        
-        // access global var
-        module1.accessGlobalVar();
+    <script type="module">
+        // need live-server to enable import syntax
+        import module1 from '/index.js';
+        console.log("module1", module1);
     </script>
 </head>
 <body>
-    <h1> IIFE (Immediately Invoked Function Expression)</h1>
+    <h1> ES6 Module Pattern</h1>
 </body>
 </html>
